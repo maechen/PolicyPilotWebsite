@@ -7,8 +7,7 @@ export function FinalCTA() {
 
     const benefits = [
         "100% Free first case analysis",
-        "No credit card required",
-        "Results in as little as 48 hours"
+        "No credit card required"
     ];
 
     return (

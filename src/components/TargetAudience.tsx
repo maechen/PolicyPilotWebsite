@@ -1,21 +1,36 @@
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
+
 export function TargetAudience() {
+    const { isVisible, ref: sectionRef } = useScrollAnimation({
+        threshold: 0.2,
+    });
+
     return (
         <section
+            ref={sectionRef}
             id="audience"
             className="min-h-screen flex items-center py-20 px-6"
             style={{ backgroundColor: "#ffffff" }}
         >
             <div className="max-w-5xl mx-auto text-center space-y-10">
                 <h3
-                    className="text-4xl md:text-5xl font-bold"
+                    className={`text-4xl md:text-5xl font-bold transition-all duration-700 ${
+                        isVisible
+                            ? "animate-slideFromLeft opacity-100"
+                            : "opacity-0 translate-x-[-60px]"
+                    }`}
                     style={{ color: "#030213" }}
                 >
                     Built for the 'Sandwich Generation'
                 </h3>
 
                 <p
-                    className="max-w-4xl mx-auto text-xl leading-relaxed"
-                    style={{ color: "#707986" }}
+                    className={`max-w-4xl mx-auto text-xl leading-relaxed transition-all duration-700 delay-200 ${
+                        isVisible
+                            ? "animate-slideFromLeft opacity-100"
+                            : "opacity-0 translate-x-[-60px]"
+                    }`}
+                    style={{ color: "#707986", animationDelay: "0.2s" }}
                 >
                     PolicyPilot was designed for busy adults juggling care for
                     aging parents while raising their own children. You're
