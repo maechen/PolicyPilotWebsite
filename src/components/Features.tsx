@@ -1,10 +1,10 @@
-import { Shield, Search, Mail } from "lucide-react";
+import { Upload, Search, Mail } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 
 export function Features() {
   const features = [
     {
-      icon: Shield,
+      icon: Upload,
       title: "Upload & Decipher",
       description: "Securely upload your denial notice and policy documents. Our HIPAA-compliant AI analyzes everything to identify the specific reasons for denial and uncover potential weaknesses in the insurer's decision."
     },

@@ -1,13 +1,14 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Check } from "lucide-react";
+import sln_img from "@/assets/images/sln_img.png";
 
 export function SolutionOverview() {
   return (
     <section id="solution" className="min-h-screen flex items-center py-20 px-6" style={{ backgroundColor: '#f9fafb' }}>
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center w-full">
-        <div className="rounded-lg overflow-hidden shadow-xl border border-gray-200 aspect-video">
+        <div className="rounded-lg overflow-hidden shadow-xl border border-gray-200">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1681505512385-8b9d567a56c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdXJhbmNlJTIwZG9jdW1lbnRzJTIwZGVza3xlbnwxfHx8fDE3NjI4MTA4ODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            src={sln_img}
             alt="PolicyPilot Interface"
             className="w-full h-full object-cover"
           />
@@ -18,7 +19,7 @@ export function SolutionOverview() {
           
           <p className="text-xl" style={{ color: '#707986' }}>
             PolicyPilot is an AI-powered platform that analyzes your denial, researches your 
-            policy, and helps you craft compelling appeals — all while keeping you in complete 
+            policy, and helps you craft compelling appeals. All while keeping you in complete 
             control. We handle the complexity so you can focus on what matters most.
           </p>
           
