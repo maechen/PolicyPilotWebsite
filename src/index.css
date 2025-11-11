@@ -1249,6 +1249,201 @@
 
 html {
   font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out both;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out both;
+  will-change: opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.6s ease-out both;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s cubic-bezier(.22,.9,.26,1) both;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.8s cubic-bezier(.22,.9,.26,1) both;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.animate-slideFromLeft {
+  animation: slideFromLeft 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Stagger delays for sequential animations */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-600 {
+  animation-delay: 0.6s;
+}
+
+/* GPU acceleration utility */
+.transform-gpu {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Navigation item hover effects */
+.nav-item {
+  position: relative;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #5386fc;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-50%);
+}
+
+.nav-item:hover {
+  transform: translateY(-4px) scale(1.15);
+  color: #5386fc !important;
+  background-color: rgba(83, 134, 252, 0.05);
+  box-shadow: 0 8px 20px rgba(83, 134, 252, 0.15);
+}
+
+.nav-item:hover::after {
+  width: 75%;
+}
+
+/* Small pop / lift effect used by buttons and list items */
+.pop-hover {
+  transition: transform 220ms cubic-bezier(.2,.9,.3,1), box-shadow 220ms cubic-bezier(.2,.9,.3,1);
+  will-change: transform, box-shadow;
+  transform: translateZ(0);
+}
+
+.pop-hover:hover,
+.pop-hover:focus {
+  transform: translateY(-8px) scale(1.08);
+  box-shadow: 0 24px 48px rgba(3, 2, 19, 0.15), 0 8px 20px rgba(83, 134, 252, 0.12);
+}
+
+/* Slightly smaller pop for lists */
+.pop-hover-sm {
+  transition: transform 150ms cubic-bezier(.2,.9,.3,1), box-shadow 150ms cubic-bezier(.2,.9,.3,1);
+  will-change: transform, box-shadow;
+}
+
+.pop-hover-sm:hover,
+.pop-hover-sm:focus {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(3, 2, 19, 0.08);
 }
 
 @property --tw-space-y-reverse {

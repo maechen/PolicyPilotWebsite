@@ -7,7 +7,7 @@ export function TargetAudience() {
         >
             <div className="max-w-5xl mx-auto text-center space-y-10">
                 <h3
-                    className="text-4xl md:text-5xl"
+                    className="text-4xl md:text-5xl font-bold"
                     style={{ color: "#030213" }}
                 >
                     Built for the 'Sandwich Generation'
