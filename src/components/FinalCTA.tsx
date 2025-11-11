@@ -5,11 +5,6 @@ import { useScrollAnimation } from "../hooks/useScrollAnimation";
 export function FinalCTA() {
     const { isVisible, ref: sectionRef } = useScrollAnimation({ threshold: 0.2 });
 
-    const benefits = [
-        "100% Free first case analysis",
-        "No credit card required"
-    ];
-
     return (
         <section 
             ref={sectionRef}
@@ -48,21 +43,6 @@ export function FinalCTA() {
                             Start Your Appeal Now
                             <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                         </Button>
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
-                        {benefits.map((benefit, index) => (
-                            <div 
-                                key={index} 
-                                className={`flex items-center gap-2 transition-all duration-300 hover:scale-110 ${isVisible ? 'animate-fadeIn' : 'opacity-0'}`}
-                                style={{ animationDelay: `${0.5 + index * 0.1}s` }}
-                            >
-                                <CheckCircle2 className="w-5 h-5" style={{ color: "#ffffff" }} />
-                                <span className="text-sm" style={{ color: "#ffffff" }}>
-                                    {benefit}
-                                </span>
-                            </div>
-                        ))}
                     </div>
                 </div>
 
