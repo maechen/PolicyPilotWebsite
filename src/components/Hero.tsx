@@ -30,13 +30,15 @@ export function Hero() {
                         confidence.
                     </p>
                     <div className={`transition-all duration-700 delay-300 ${isVisible ? 'animate-slideFromLeft opacity-100' : 'opacity-0 translate-x-[-60px]'}`} style={{ animationDelay: '0.3s' }}>
-                        <Button
-                            className="rounded-full px-10 py-7 text-lg font-bold group"
-                            style={{ backgroundColor: "#5386fc", color: "#ffffff" }}
-                        >
-                            Start Your Appeal Now
-                            <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-                        </Button>
+                        <a href="https://policypilot-silk.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            <Button
+                                className="rounded-full px-10 py-7 text-lg font-bold group"
+                                style={{ backgroundColor: "#5386fc", color: "#ffffff" }}
+                            >
+                                Start Your Appeal Now
+                                <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                            </Button>
+                        </a>
                     </div>
                 </div>
 

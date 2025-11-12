@@ -36,13 +36,15 @@ export function FinalCTA() {
 
                 <div className={`flex flex-col items-center gap-6 transition-all duration-700 delay-300 ${isVisible ? 'animate-slideFromLeft opacity-100' : 'opacity-0 translate-x-[-60px]'}`} style={{ animationDelay: '0.3s' }}>
                     <div className="flex flex-col sm:flex-row items-center gap-4">
-                        <Button
-                            className="rounded-full px-10 py-7 text-lg font-bold transition-all duration-300 hover:scale-110 hover:shadow-2xl group"
-                            style={{ backgroundColor: "#ffffff", color: "#5386fc" }}
-                        >
-                            Start Your Appeal Now
-                            <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-                        </Button>
+                        <a href="https://policypilot-silk.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            <Button
+                                className="rounded-full px-10 py-7 text-lg font-bold transition-all duration-300 hover:scale-110 hover:shadow-2xl group"
+                                style={{ backgroundColor: "#ffffff", color: "#5386fc" }}
+                            >
+                                Start Your Appeal Now
+                                <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                            </Button>
+                        </a>
                     </div>
                 </div>
 
