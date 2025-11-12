@@ -16,13 +16,13 @@ export function Features() {
       icon: Search,
       title: "Plan Your Approach",
       description: "Get a clear, plain-English explanation of your appeal strategy. We highlight relevant policy clauses, medical necessity criteria, and procedural errors that strengthen your case.",
-      color: "#7ba4ff"
+      color: "#5386fc"
     },
     {
       icon: Mail,
       title: "Communicate & Resolve",
       description: "Review and approve professional appeal letters drafted specifically for your case. Track responses, monitor deadlines, and get guidance on follow-ups until your case is resolved.",
-      color: "#4a6fd8"
+      color: "#5386fc"
     }
   ];
 
@@ -44,7 +44,7 @@ export function Features() {
             return (
               <Card 
                 key={index} 
-                className={`border-0 shadow-lg transition-all duration-700 pop-hover-sm ${
+                className={`border-0 shadow-lg transition-all duration-700 ${
                   isVisible ? 'animate-slideFromLeft opacity-100' : 'opacity-0 translate-x-[-60px]'
                 }`}
                 style={{ animationDelay: `${index * 0.12}s` }}
