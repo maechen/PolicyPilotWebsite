@@ -11,7 +11,7 @@ export function ProblemStatement() {
         </h2>
         
         <div className="grid md:grid-cols-3 gap-12">
-          <div className={`space-y-4 pop-hover-sm transition-all duration-700 delay-200 ${isVisible ? 'animate-slideFromLeft opacity-100' : 'opacity-0 translate-x-[-60px]'}`} style={{ animationDelay: '0.2s' }}>
+          <div className={`space-y-4 transition-all duration-700 delay-200 ${isVisible ? 'animate-slideFromLeft opacity-100' : 'opacity-0 translate-x-[-60px]'}`} style={{ animationDelay: '0.2s' }}>
             <div className="text-6xl md:text-7xl font-bold" style={{ color: '#5386fc' }}>
               19%
             </div>
@@ -20,7 +20,7 @@ export function ProblemStatement() {
             </p>
           </div>
           
-          <div className={`space-y-4 pop-hover-sm transition-all duration-700 delay-300 ${isVisible ? 'animate-slideFromLeft opacity-100' : 'opacity-0 translate-x-[-60px]'}`} style={{ animationDelay: '0.3s' }}>
+          <div className={`space-y-4 transition-all duration-700 delay-300 ${isVisible ? 'animate-slideFromLeft opacity-100' : 'opacity-0 translate-x-[-60px]'}`} style={{ animationDelay: '0.3s' }}>
             <div className="text-6xl md:text-7xl font-bold" style={{ color: '#5386fc' }}>
               {'<0.1%'}
             </div>
@@ -29,7 +29,7 @@ export function ProblemStatement() {
             </p>
           </div>
           
-          <div className={`space-y-4 pop-hover-sm transition-all duration-700 delay-400 ${isVisible ? 'animate-slideFromLeft opacity-100' : 'opacity-0 translate-x-[-60px]'}`} style={{ animationDelay: '0.4s' }}>
+          <div className={`space-y-4 transition-all duration-700 delay-400 ${isVisible ? 'animate-slideFromLeft opacity-100' : 'opacity-0 translate-x-[-60px]'}`} style={{ animationDelay: '0.4s' }}>
             <div className="text-6xl md:text-7xl font-bold" style={{ color: '#5386fc' }}>
               90%
             </div>

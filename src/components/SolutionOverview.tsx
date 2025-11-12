@@ -53,7 +53,7 @@ export function SolutionOverview() {
             {benefits.map((benefit, index) => (
               <div 
                 key={index}
-                className={`flex gap-4 transition-all duration-700 pop-hover-sm ${
+                className={`flex gap-4 transition-all duration-700 ${
                   isVisible ? 'animate-slideFromLeft opacity-100' : 'opacity-0 translate-x-[-60px]'
                 }`}
                 style={{ animationDelay: isVisible ? `${0.4 + index * 0.1}s` : '0s' }}

@@ -30,7 +30,7 @@ export function FinalCTA() {
                     style={{ color: "#ffffff", opacity: 0.95, animationDelay: '0.2s' }}
                 >
                     Don't let insurance companies profit from your confusion and
-                    exhaustion. Join thousands who have successfully appealed
+                    exhaustion. Be one of the first who have successfully appealed
                     their denials with PolicyPilot.
                 </p>
 
